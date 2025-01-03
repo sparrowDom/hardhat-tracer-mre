@@ -6,7 +6,7 @@
   "author": "Origin Protocol",
   "license": "MIT",
   "scripts": {
-    "start": "npx --no-install hardhat node --verbose --trace"
+    "start": "rm -rf cache/ artifacts/ && npx hardhat compile && npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/[ALCHEMY_API_KEY] --verbose --trace"
   },
   "devDependencies": {
     "@chainlink/contracts-ccip": "^1.2.1",
@@ -17,7 +17,6 @@
     "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.0",
-    "@openzeppelin/contracts": "4.4.2",
     "@typechain/ethers-v6": "^0.5.0",
     "@typechain/hardhat": "^9.0.0",
     "chai": "^4.2.0",
