@@ -55,3 +55,10 @@ The Hardhat Network tracing engine could not be initialized. Run Hardhat with --
 
 ## Opcodes 
 Here [is the diff](https://www.diffchecker.com/k5B0uByT/) between a decompiled contract that contains no problematic opcodes (left part of diff) and the one with problematic opcodes (right part of diff)
+
+The codes I see in the problematic contract that I do not see in the non problematic one are: 
+- ADDMOD
+- SMOD
+- CALLER
+
+Though without debugging the Rust module `edr_solidity/src/source_map.rs` this is just guessing.
